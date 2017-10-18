@@ -1,6 +1,6 @@
-FROM alpine:latest
-RUN apk update \
-    && apk add ruby ruby-dev build-base \
+FROM ubuntu:16.04
+RUN apt-get update \
+    && apt -y install ruby ruby-dev build-essential \
     && gem install bundler --no-ri --no-rdoc
 
 ENV APP_HOME /app
